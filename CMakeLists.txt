@@ -31,3 +31,50 @@ target_link_libraries( ${PROJECT_NAME}
         ${Boost_LIBRARIES}
 	${CMAKE_THREAD_LIBS_INIT}
 )
+
+add_executable(
+	1_simple 
+	examples/1_simple/main.cpp
+)
+
+target_link_libraries(1_simple ${PROJECT_NAME})
+
+add_executable(
+	2_with_timeout 
+	examples/2_with_timeout/main.cpp
+)
+
+target_link_libraries(2_with_timeout ${PROJECT_NAME})
+
+add_executable(
+	3_async 
+	examples/3_async/main.cpp
+)
+
+target_link_libraries(3_async ${PROJECT_NAME})
+
+add_executable(
+	4_callback_simple
+	examples/4_callback/main.cpp
+)
+
+target_link_libraries(4_callback_simple ${PROJECT_NAME})
+
+add_executable(
+	4_callback_termios
+	examples/4_callback/test.cpp
+)
+
+target_link_libraries(4_callback_termios ${PROJECT_NAME})
+
+add_executable(
+	6_stream
+	examples/6_stream/main.cpp
+)
+
+target_link_libraries(6_stream ${PROJECT_NAME})
+
+
+
+
+
